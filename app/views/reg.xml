@@ -1,0 +1,22 @@
+<Alloy>
+	<Collection src="user"></Collection>
+	<Window id="Register">
+		<TableView>
+			<TableViewRow layout="vertical">
+				<Label>Username:</Label>
+				<TextField id="username" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" left="40" width="250" height="60"/>
+				<Label>Password:</Label>
+				<TextField id="password" passwordMask="true" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" left="40" width="250" height="60"/>
+				<OptionDialog id="options" title="Dept" cancel="2">
+					<Options>
+						<Option>Staff</Option>
+						<Option>Student</Option>
+						<Option>cancel</Option>
+					</Options>
+				</OptionDialog>
+				<Button onClick="showOptions">Options</Button>
+				<Button id="registerButton" onClick="registerClick">Submit</Button>
+			</TableViewRow>
+		</TableView>
+	</Window>
+</Alloy>

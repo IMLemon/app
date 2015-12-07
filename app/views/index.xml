@@ -1,0 +1,54 @@
+<Alloy>
+	<Collection src="webnews"></Collection>
+	<Collection src="Venue"></Collection>
+	<TabGroup>
+		<Tab title="News" icon="KS_nav_ui.png" id="newtab">
+			<Window title="HKBU">
+				<TableView dataCollection="webnews" dataTransform="newstransform" onClick="newsClick">
+					<TableViewRow layout="vertical" eid="{id}">
+						<ImageView image="{image}" top="20dp"></ImageView>
+						<Label text="{shortDes}" bottom="20dp"></Label>
+					</TableViewRow>
+				</TableView>
+			</Window>
+		</Tab>
+		<Tab title="Events" icon="KS_nav_views.png" id="eventstab">
+			<Window title="Events">
+				<TableView onClick="eventsClick">
+					<TableViewSection headerTitle="University Offices">
+						<TableViewRow title="Office of Student Affair" fid="Office of Student Affair"></TableViewRow>
+						<TableViewRow title="Academic Registry" fid="Academic Registry"></TableViewRow>
+						<TableViewRow title="Music Society" fid="Music Society"></TableViewRow>
+					</TableViewSection>
+					<TableViewSection headerTitle="Faculty of Science">
+						<TableViewRow title="Computer" fid="comp"></TableViewRow>
+						<TableViewRow title="Maths" fid="Maths"></TableViewRow>
+						<TableViewRow title="Social Science" fid="gis"></TableViewRow>
+					</TableViewSection>
+				</TableView>
+			</Window>
+		</Tab>
+		<Tab title="Location" icon="KS_nav_views.png" id="loctab">
+			<Window title="Location">
+				<TableView onClick="LocClick" dataCollection="Venue" dataTransform="loctransform">
+					<TableViewSection headerTitle="{item}">
+						<TableViewRow title="{VenueName}" fid="{VenueID}"></TableViewRow>
+					</TableViewSection>
+				</TableView>
+			</Window>
+		</Tab>
+		<Tab title="Map" icon="KS_nav_views.png" id="maptab">
+			<Window title="Map">
+				<Module id="mapView" onClick="mapClick" module="ti.map" method="createView" userLocation="true" dataCollection="Venue" dataTransform="maptransform"></Module>
+			</Window>
+		</Tab>
+		<Tab title="Profile" icon="KS_nav_views.png" id="usertab">
+			<Window title="Profile">
+				<TableView>
+					<TableViewRow id="log" title="Login" onClick="loginClick"/>
+					<TableViewRow title="Myregistered Event" onClick="regeventClick"/>
+					</TableView>
+			</Window>
+		</Tab>
+	</TabGroup>
+</Alloy>

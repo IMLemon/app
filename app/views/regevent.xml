@@ -1,0 +1,8 @@
+<Alloy>
+	<Collection src="regevent"/>
+	<Window id="win">
+		<TableView dataCollection="regevent"  id="regeventtable" onClick="regeventClick">
+			<TableViewRow title="{name}" eid="{id}"/>
+		</TableView>
+	</Window>
+</Alloy>

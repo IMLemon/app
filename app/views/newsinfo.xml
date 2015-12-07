@@ -1,0 +1,16 @@
+<Alloy>
+	<Collection src="webnews"></Collection>
+	<!-- <Collection src="regevent"></Collection> -->
+	<Window id="win">
+		<RightNavButton>
+			<Button id="regButton" onClick="regClick"/>
+		</RightNavButton>
+		<TableView dataCollection="webnews" dataFilter="filter" >
+			<TableViewRow layout="vertical" >
+				<ImageView image="{image}" top="20dp"></ImageView>
+				<Label text="{fullDes}" bottom="20dp"></Label>
+				<Button title="Address" specific="{venue}" onClick="locClick" left="5dp"></Button>
+			</TableViewRow>
+		</TableView>
+	</Window>
+</Alloy>

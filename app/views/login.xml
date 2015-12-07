@@ -1,0 +1,15 @@
+<Alloy>
+	<Window id="Login">
+		<TableView>
+			<TableViewRow layout="vertical" >
+				<Label>Username:</Label>
+				<TextField id="username" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" left="40" width="250" height="60"/>
+				<Label>Password:</Label>
+				<TextField id="password" passwordMask="true" borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" color="#336699" left="40" width="250" height="60"/>
+				<Button id="loginButton" onClick="submitClick">Login</Button>
+				<Label>If you have account,please click here:</Label>
+				<Button id="regButton" onClick="regClick">Register</Button>
+			</TableViewRow>
+		</TableView>
+	</Window>
+</Alloy>
